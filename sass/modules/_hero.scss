@@ -1,0 +1,36 @@
+.hero{
+    width: 100%;
+    height: 900px;
+    position: relative;
+    background: url('../img/hero.jpg') no-repeat bottom center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    .caption{
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        margin-top: -105px;
+        z-index: 10;
+        %heading{
+            color: $top-color;
+            font-family: $p22-corinthia;
+        }
+        h2{
+            @extend %heading;
+            font-size: 100px;
+            font-weight: lighter;
+            margin: 0;
+            position: relative;
+            display: block;
+        }
+        h3{
+            @extend %heading;
+            font-size: 14px;
+            margin: -15px 0 0 25px;
+            left: 1px;
+        }
+    }
+}

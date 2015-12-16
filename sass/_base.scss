@@ -1,0 +1,32 @@
+body{
+    background: $color-background;
+}
+.wrapper{
+    max-width: $width-large;
+    margin: 0 auto;
+    position: relative;
+}
+
+@for $i from 1 through length($heading-size) {
+	h#{$i} {
+		font-size: nth($heading-size, $i);
+		margin: nth($heading-margin, $i);
+		font-weight: bolder;
+		color: $heading-color;
+	    font-family: $lato-regular;
+	    letter-spacing: 1px;
+	}
+}
+
+.clearfix {
+    *zoom: 1;
+
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}

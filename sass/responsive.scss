@@ -1,0 +1,227 @@
+@include break(1500px){
+    .hero{
+        height: 800px;
+    }
+}
+
+@include break(1150px){
+    .wrapper{
+        padding: 0 40px;
+        max-width: 1020px;
+    }
+    .search .advanced_search {
+        .arrow{
+            top: -8px;
+            right: 46px;
+        }
+        #check_in_date,
+        #check_out_date,
+        #min_price,
+        #max_price {
+            width: 46.27272727272727%;
+            padding: 0 1.818181818181818%;
+        }
+        #check_in_date,
+        #check_out_date{
+            background: url('../img/calendar_icon.png') no-repeat;
+            background-position: 95.08840864440079% 50%;
+        }
+        #keywords{
+            width: 96.36363636363636%;
+            padding: 0 1.818181818181818%;
+        }
+    }
+
+    footer .footer > ul > li{
+        margin-right: 5.454545454545455%;
+        &.links{
+            width: 17.90909090909091%;
+        }
+        &.about{
+            width: 29.72727272727273%;
+        }
+    }
+}
+
+@include break(800px){
+    .hero{
+        height: 600px;
+        .caption{
+            width: 92.72727272727273%;
+            padding: 0 3.636363636363636%;
+            h3{
+                margin: 0;
+                left: 0;
+            }
+        }
+    }
+
+    header {
+        a.hamburger{
+            display: block;
+        }
+        nav{
+            position: absolute;
+            display: none;
+            width: 92.72727272727273%;
+            top: 95px;
+            left: 3.636363636363636%;
+            float: none;
+            z-index: 20;
+            overflow: hidden;
+            background: #fff;
+            border-top: 5px solid #bfd9f2;
+            &.active{
+                display: block;
+            }
+            .login_btn{
+                float: none;
+                display: inline-block;
+                width: 100%;
+                border: 0;
+                margin: 0;
+                padding: 20px 0;
+                text-align: center;
+                background: #f2f3f3;
+            }
+            ul{
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-top: 0;
+                li{
+                    display: block;
+                    width: 100%;
+                    float: none;
+                    margin-left: 0;
+                    a{
+                        display: block;
+                        padding: 25px 0;
+                        border-bottom: 1px solid #f2f3f3;
+                        color: #1c3655;
+                        @include transition(.2s, background);
+                        &:active{
+                            background: #f2f3f3;
+                        }
+                    }
+                    &:last-child{
+                        border: 0;
+                    }
+                }
+            }
+        }
+        .login_btn{
+            color: #1c3655;
+            &:hover{
+                background: #eaebeb;
+            }
+        }
+    }
+    .listings ul.properties_list li{
+        width: 46.36363636363636%;
+        margin: 0 7.272727272727273% 7.272727272727273% 0;
+        &:nth-child(3n+0){
+            margin: 0 7.272727272727273% 7.272727272727273% 0;
+        }
+        &:nth-child(2n+0){
+            margin-right: 0;
+        }
+    }
+
+    footer .footer > ul > li{
+        width: 29.6969696969697%!important;
+        margin-right: 5.454545454545455%;
+        margin-bottom: 100px;
+        &:nth-child(3){
+            margin-right: 0;
+        }
+        &.links li a{
+            text-align: center;
+        }
+        &.about{
+            text-align: center;
+            float: none;
+            display: inline;
+            margin-right: 100%;
+            overflow: hidden;
+            border-top: 1px solid #82abd4;
+        }
+    }
+}
+
+@include break(700px){
+    .search .advanced_search {
+        #check_in_date,
+        #check_out_date,
+        #min_price,
+        #max_price{
+            width: 96.36363636363636%;
+            padding: 0 1.818181818181818%;
+            border-bottom: 1px solid #aac8e4;
+        }
+        #check_in_date,
+        #check_out_date{
+            background: url('../img/calendar_icon.png') no-repeat;
+            background-position: 95.08840864440079% 50%;
+        }
+        #keywords{
+            width: 96.36363636363636%;
+            padding: 0 1.818181818181818%;
+        }
+        .search_fields{
+            border-bottom: 0;
+        }
+        .field_sep{
+            display: none;
+        }
+    }
+}
+
+@include break(500px){
+    .hero .caption {
+        h2{
+            font-size: 85px;
+        }
+        h3{
+            font-size: 16px;
+        }
+    }
+    .search #search{
+        width: 83%;
+    }
+    .listings {
+        ul.properties_list li{
+            width: 100%;
+            margin-bottom: 60px!important;
+            &:last-child{
+                margin-bottom: 0!important;
+            }
+            &:nth-child(3n+0),
+            &:nth-child(2n+0){
+                margin:0;
+            }
+        }
+        .more_listing_btn{
+            display: block;
+            width: 100%;
+            padding-left: 0!important;
+            padding-right: 0!important;
+        }
+    }
+    footer .footer > ul > li{
+        &.links,
+        &.about{
+            float: none;
+            width: 100%!important;
+            margin-right: 0;
+            margin-bottom: 60px;
+            padding-bottom: 60px;
+        }
+        &:last-child{
+            padding-bottom: 0;
+        }
+        &.links{
+            border-bottom: 1px solid #82abd4;
+        }
+    }
+}

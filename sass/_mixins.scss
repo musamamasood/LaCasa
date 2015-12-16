@@ -1,0 +1,99 @@
+// include clearfix;
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+	*zoom: 1;
+}
+//media breakpoint
+@mixin break($args...){
+	@if length( $args ) {
+		@media (max-width: nth($args, 1)) {
+			@content;
+		}
+	} @else {
+		@media (min-width: nth($args, 1))
+		and (max-width: nth($args, 2)) {
+			@content;
+		}
+	}
+}
+//Border
+@mixin border($width: 1px, $style: solid, $color: $white){
+	border: $width $style $color;
+}
+//Transitions
+@mixin transition($duration, $property: all, $timing-function: liner){
+	-moz-transition: $property $duration $timing-function;
+    -webkit-transition: $property $duration $timing-function;
+    -o-transition: $property $duration $timing-function;
+    transition: $property $duration $timing-function;
+}
+//box-shadow
+@mixin box-shadow($shadow) {
+    -moz-box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+//border-radius
+@mixin border-radius($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+//Animation
+@mixin animation($name, $duration: 1s, $easing: linear, $direction: forwards) {
+    -webkit-animation: $name $duration $easing $direction;
+    -moz-animation: $name $duration $easing $direction;
+    animation: $name $duration $easing $direction;
+}
+//Keyframes
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-o-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+//Placeholder
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+//Cross browser opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}

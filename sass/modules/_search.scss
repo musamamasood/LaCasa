@@ -1,0 +1,125 @@
+.search{
+    width: 100%;
+    height: 100px;
+    background: #bfd9f2;
+    position: relative;
+    #search{
+        display: block;
+        width: 90.90909090909091%;
+        height: 100px;
+        float: left;
+        border: 0;
+        outline: none;
+        margin: 0;
+        padding: 0;
+        background: #bfd9f2;
+        color: #ffffff;
+        font-family: $lato-regular;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 22px;
+        @include placeholder {
+           color: #95badf;
+        }
+    }
+    #submit_search{
+        display: none;
+    }
+    .advanced_search_icon{
+        display: block;
+        width: 26px;
+        height: 26px;
+        float: right;
+        background: url('../img/advanced_search_inactive.png') no-repeat;
+        margin-top: 37px;
+        @include transition(.2s);
+        &:hover{
+            background: url('../img/advanced_search_hover.png') no-repeat;
+        }
+        &.active{
+            background: url('../img/advanced_search_active.png') no-repeat;
+        }
+    }
+    .advanced_search{
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background: #cbe0f4;
+        border-top: 1px solid #aac8e4;
+        border-bottom: 1px solid #aac8e4;
+        z-index: 9999;
+        display: none;
+        .arrow{
+            display: block;
+            width: 14px;
+            height: 9px;
+            background: url('../img/search_arrow.png') no-repeat;
+            position: absolute;
+            top: -8px;
+            right: 6px;
+        }
+        .float{
+            float: left;
+        }
+        #check_in_date,
+        #check_out_date,
+        #min_price,
+        #max_price,
+        #keywords{
+            color: #ffffff;
+            font-family: $lato-regular;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 22px;
+            @include placeholder {
+                color: #95badf;
+            }
+        }
+        #check_in_date,
+        #check_out_date,
+        #min_price,
+        #max_price{
+            display: block;
+            width: 509px;
+            height: 100px;
+            border: 0;
+            margin: 0;
+            padding: 0 20px;
+            outline: none;
+            background: #cbe0f4;
+        }
+        #check_in_date,
+        #check_out_date{
+            background: url('../img/calendar_icon.png') no-repeat;
+            background-position: 484px 50%;
+            padding: 0 100px 0 20px;
+            width: 429px;
+        }
+        .search_fields{
+            overflow: hidden;
+            border-bottom: 1px solid #aac8e4;
+        }
+        .field_sep{
+            display: inline-block;
+            width: 1px;
+            height: 60px;
+            border: 0;
+            background: #aac8e4;
+            margin: 20px 0 0 0;
+            padding: 0;
+        }
+        #keywords{
+            display: block;
+            width: 1060px;
+            height: 100px;
+            border: 0;
+            margin: 0;
+            padding: 0 20px;
+            outline: none;
+            background: #cbe0f4;
+        }
+    }
+}
