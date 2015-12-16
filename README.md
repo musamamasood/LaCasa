@@ -1,4 +1,4 @@
-# LaCasa HTML Template
+# LaCasa
 This is the repository for, [LaCasa](http://pixelhint.com/la-casa-free-real-estate-fully-responsive-html5-css3-home-page-template/).
 
 ## Course Description
